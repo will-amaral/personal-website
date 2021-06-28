@@ -3,10 +3,13 @@ function Card(props) {
   return (
     <a href={href}>
       <article>
-        <h2>{title} &rarr;</h2>
+        <h1>{title} &rarr;</h1>
         <p>{children}</p>
       </article>
       <style jsx>{`
+        h1 {
+          font-size: 3rem;
+        }
         a {
           color: inherit;
           text-decoration: none;

@@ -3,6 +3,8 @@ import { Toaster } from 'react-hot-toast';
 import '@/styles/normalize.css';
 import '@/styles/barebones.css';
 
+import { AppWrapper } from '@/context/theme';
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -12,7 +14,9 @@ function MyApp({ Component, pageProps }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Toaster position='top-center' />
-      <Component {...pageProps} />
+      <AppWrapper>
+        <Component {...pageProps} />
+      </AppWrapper>
     </>
   );
 }
