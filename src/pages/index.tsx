@@ -23,6 +23,7 @@ export default function Home() {
           href='https://github.com/will-amaral'
           aria-label='My github profile'
           target='_blank'
+          rel='noreferrer'
         >
           <Github />
         </a>
@@ -30,6 +31,7 @@ export default function Home() {
           href='https://twitter.com/willamaral_io'
           aria-label='My twitter profile'
           target='_blank'
+          rel='noreferrer'
         >
           <Twitter />
         </a>
@@ -37,6 +39,7 @@ export default function Home() {
           href='https://www.instagram.com/will.amaral.io/'
           aria-label='My instagram profile'
           target='_blank'
+          rel='noreferrer'
         >
           <Instagram />
         </a>
@@ -44,6 +47,7 @@ export default function Home() {
           href='https://www.linkedin.com/in/willian-amaral/'
           aria-label='My linkedin profile'
           target='_blank'
+          rel='noreferrer'
         >
           <Linkedin />
         </a>

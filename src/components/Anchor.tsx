@@ -3,7 +3,13 @@ import { ComponentPropsWithoutRef, ReactNode } from 'react';
 function Anchor(props: AnchorProps) {
   const { href, label, children, ...rest } = props;
   return (
-    <a href={href} aria-label={`Go to ${label}`} target='_blank' {...rest}>
+    <a
+      href={href}
+      aria-label={`Go to ${label}`}
+      target='_blank'
+      rel='noreferrer'
+      {...rest}
+    >
       {children ?? label}
     </a>
   );
