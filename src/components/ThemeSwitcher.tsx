@@ -1,6 +1,6 @@
 import { Sun, Moon } from './icons';
 
-function Theme(props) {
+function ThemeSwitcher(props: ThemeSwitcherProps) {
   const { isDark, toggleTheme } = props;
   return (
     <button aria-label='Trocar o tema' onClick={toggleTheme}>
@@ -31,4 +31,9 @@ function Theme(props) {
   );
 }
 
-export default Theme;
+type ThemeSwitcherProps = {
+  isDark: boolean;
+  toggleTheme: () => void;
+};
+
+export default ThemeSwitcher;

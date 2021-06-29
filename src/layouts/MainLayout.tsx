@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { NavLink, Theme } from '@/components';
+import { NavLink, ThemeSwitcher } from '@/components';
 import { useThemeContext } from '@/context/theme';
 import { ReactNode } from 'react';
 
@@ -17,7 +17,7 @@ function MainLayout(props: MainLayoutProps) {
           <NavLink href='/work'>Work</NavLink>
           <NavLink href='/blog'>Blog</NavLink>
         </nav>
-        <Theme isDark={isDark} toggleTheme={toggleTheme} />
+        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
       </header>
       <main>{children}</main>
       <footer className='grid-container full'>

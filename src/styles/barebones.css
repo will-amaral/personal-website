@@ -115,9 +115,15 @@ img.dark.value-img {
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 html {
   font-size: var(--base-font-size);
-  scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;

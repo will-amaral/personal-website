@@ -15,19 +15,25 @@ export default function Home() {
         <small>(Don't tell my boss)</small>
       </p>
       <address>
-        <a href='https://github.com/will-amaral'>
+        <a href='https://github.com/will-amaral' aria-label='My github profile'>
           <Github />
         </a>
-        <a href='https://twitter.com/willamaral_io'>
+        <a href='https://twitter.com/willamaral_io' aria-label='My twitter profile'>
           <Twitter />
         </a>
-        <a href='https://www.instagram.com/will.amaral.io/'>
+        <a
+          href='https://www.instagram.com/will.amaral.io/'
+          aria-label='My instagram profile'
+        >
           <Instagram />
         </a>
-        <a href='https://www.linkedin.com/in/willian-amaral/'>
+        <a
+          href='https://www.linkedin.com/in/willian-amaral/'
+          aria-label='My linkedin profile'
+        >
           <Linkedin />
         </a>
-        <a href='https://www.behance.net/will-amaral'>
+        <a href='https://www.behance.net/will-amaral' aria-label='My behance profile'>
           <Behance />
         </a>
       </address>
