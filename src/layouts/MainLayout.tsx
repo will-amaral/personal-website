@@ -9,7 +9,7 @@ function MainLayout(props: MainLayoutProps) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title} | Will Amaral</title>
       </Head>
       <header>
         <nav>
@@ -26,7 +26,7 @@ function MainLayout(props: MainLayoutProps) {
       <style jsx>{`
         header {
           max-width: var(--container-max-width);
-          margin: 5% auto;
+          margin: 4% auto;
           padding: 20px;
           display: flex;
           justify-content: space-between;
@@ -37,6 +37,14 @@ function MainLayout(props: MainLayoutProps) {
           max-width: var(--container-max-width);
           margin: auto;
           min-height: 60vh;
+        }
+
+        footer {
+          margin-top: 20px;
+        }
+
+        footer > p {
+          font-size: 1.5rem;
         }
       `}</style>
     </>

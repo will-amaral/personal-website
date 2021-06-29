@@ -1,5 +1,5 @@
 import { MainLayout } from '@/layouts';
-
+import { Anchor } from '@/components';
 import { Github, Twitter, Instagram, Linkedin, Behance } from '@/components/icons';
 
 export default function Home() {
@@ -10,31 +10,42 @@ export default function Home() {
         <a href='mailto:will@amaral.dev'>will@amaral.dev</a>
       </address>
       <p>
-        I'm a web developer/journalist/graphic designer from Brazil. I build cool UIs with
-        React and NextJs most of the time, but I also love messing around with Svelte.{' '}
-        <small>(Don't tell my boss)</small>
+        I'm a Brazilian web developer/journalist. <br />
+        I build cool UIs with <Anchor
+          href='https://reactjs.org/'
+          label='React'
+        /> and <Anchor href='https://nextjs.org/' label='NextJS' /> most of the time, but
+        I also love messing around with{' '}
+        <Anchor href='https://svelte.dev/' label='Svelte' /> and anything JavaScript.
       </p>
       <address>
-        <a href='https://github.com/will-amaral' aria-label='My github profile'>
+        <a
+          href='https://github.com/will-amaral'
+          aria-label='My github profile'
+          target='_blank'
+        >
           <Github />
         </a>
-        <a href='https://twitter.com/willamaral_io' aria-label='My twitter profile'>
+        <a
+          href='https://twitter.com/willamaral_io'
+          aria-label='My twitter profile'
+          target='_blank'
+        >
           <Twitter />
         </a>
         <a
           href='https://www.instagram.com/will.amaral.io/'
           aria-label='My instagram profile'
+          target='_blank'
         >
           <Instagram />
         </a>
         <a
           href='https://www.linkedin.com/in/willian-amaral/'
           aria-label='My linkedin profile'
+          target='_blank'
         >
           <Linkedin />
-        </a>
-        <a href='https://www.behance.net/will-amaral' aria-label='My behance profile'>
-          <Behance />
         </a>
       </address>
       <style jsx>
@@ -43,6 +54,7 @@ export default function Home() {
             font-weight: 500;
             margin-bottom: 0;
           }
+
           address > a {
             font-style: normal;
             font-size: 1.5em;
@@ -52,8 +64,8 @@ export default function Home() {
           }
 
           p {
-            font-size: 1.5em;
             margin-top: 50px;
+            font-size: 1.5em;
           }
 
           a:not(:last-child) {
