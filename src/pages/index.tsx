@@ -1,6 +1,6 @@
 import { MainLayout } from '@/layouts';
 import { Anchor } from '@/components';
-import { Github, Twitter, Instagram, Linkedin, Behance } from '@/components/icons';
+import { Github, Twitter, Instagram, Linkedin } from '@/components/icons';
 
 export default function Home() {
   return (
