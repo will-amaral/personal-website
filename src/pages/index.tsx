@@ -36,7 +36,7 @@ export default function Home() {
           <Twitter />
         </a>
         <a
-          href='https://www.instagram.com/will.amaral.io/'
+          href='https://www.instagram.com/will.amaral.dev/'
           aria-label='My instagram profile'
           target='_blank'
           rel='noreferrer'
