@@ -7,31 +7,26 @@ function Work() {
       <p>
         Working with the web since 2013 and with React since 2016, I have a
         bachelor's degree in Journalism and a B.Tech degree in Software
-        Development. <br />I have worked for small to medium size companies,
-        building websites and web applications of varied purposes. Even though
-        I'm mostly focused in the frontend, I actually consider myself a
-        Fullstack developer.
+        Development. <br />
+        I've worked mostly as a frontend engineer, with a high focus on React
+        and functional programming.
       </p>
       <p>I also write random stuff if you are interested.</p>
       <h2>Current Projects</h2>
       <ul>
         <li>
-          Team Lead at{' '}
-          <a href="https://triventoeducacao.com.br/">Trivento Educação</a>
-        </li>
-        <li>
-          Front-end Instructor at{' '}
-          <a href="https://cubos.academy/">Cubos Academy</a>
+          Senior Consultant and Software Engineer at{' '}
+          <a href="https://www.thoughtworks.com/">Thoughtworks</a>
         </li>
       </ul>
       <h2>Languages and Frameworks</h2>
       <ul className="grid-container halves u-align-left">
         <li>JavaScript</li>
-        <li>ReactJs and cousins</li>
+        <li>ReactJs</li>
         <li>NodeJs</li>
+        <li>Elixir</li>
         <li>Ruby</li>
-        <li>Ruby-on-Rails and Sinatra</li>
-        <li>PHP</li>
+        <li>Rust</li>
       </ul>
       <style jsx>
         {`

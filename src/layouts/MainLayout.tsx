@@ -13,15 +13,15 @@ function MainLayout(props: MainLayoutProps) {
       </Head>
       <header>
         <nav>
-          <NavLink href='/'>Hi!</NavLink>
-          <NavLink href='/work'>Work</NavLink>
-          <NavLink href='/blog'>Blog</NavLink>
+          <NavLink href="/">Hi!</NavLink>
+          <NavLink href="/work">Work</NavLink>
+          <NavLink href="/blog">Blog</NavLink>
         </nav>
         <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
       </header>
       <main>{children}</main>
-      <footer className='grid-container full'>
-        <p>Copyright © 2021 Willian Amaral</p>
+      <footer className="grid-container full">
+        <p>Copyright © {new Date().getFullYear()} Willian Amaral</p>
       </footer>
       <style jsx>{`
         header {
