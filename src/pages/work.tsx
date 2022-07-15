@@ -1,4 +1,4 @@
-import { MainLayout } from '@/layouts';
+import { MainLayout } from '@/layouts'
 
 function Work() {
   return (
@@ -28,6 +28,14 @@ function Work() {
         <li>Ruby</li>
         <li>Rust</li>
       </ul>
+      <h2>Certificates</h2>
+      <ul className="grid-container halves u-align-left">
+        <li>
+          <a href="/lean-inception-certificado.pdf">
+            Lean Inception Facilitator
+          </a>
+        </li>
+      </ul>
       <style jsx>
         {`
           h2 {
@@ -36,7 +44,7 @@ function Work() {
         `}
       </style>
     </MainLayout>
-  );
+  )
 }
 
-export default Work;
+export default Work
