@@ -1,7 +1,7 @@
-export { default as Behance } from './Behance';
-export { default as Github } from './Github';
-export { default as Instagram } from './Instagram';
-export { default as Linkedin } from './Linkedin';
-export { default as Moon } from './Moon';
-export { default as Sun } from './Sun';
-export { default as Twitter } from './Twitter';
+export { default as Behance } from './Behance.astro'
+export { default as Github } from './Github.astro'
+export { default as Instagram } from './Instagram.astro'
+export { default as Linkedin } from './Linkedin.astro'
+export { default as Moon } from './Moon.astro'
+export { default as Sun } from './Sun.astro'
+export { default as Twitter } from './Twitter.astro'
