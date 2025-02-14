@@ -1,0 +1,22 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const { href, ...rest } = Astro.props;
+---
+
+
+<a aria-current={pathname === href ? 'page' : null} href={href} {...rest}>
+  <slot />
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    color: var(--text-color-softer);
+  }
+  
+  [aria-current='page'] {
+    font-weight: 900;
+    border-bottom: 1px solid;
+  }
+</style>

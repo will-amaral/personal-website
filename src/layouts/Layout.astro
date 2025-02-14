@@ -1,0 +1,73 @@
+---
+import { ClientRouter } from 'astro:transitions'
+
+import '@/styles/normalize.css'
+import '@/styles/barebones.css'
+import Link from '@/components/Link.astro'
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
+
+const { pageTitle } = Astro.props
+---
+
+<!doctype html>
+<html lang="en" transition:name="root" transition:animate="none">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle} | Will Amaral</title>
+    <meta
+      name="description"
+      content="Software Engineer and Journalist, I work with information and technology."
+    />
+    <meta name="author" content="Will Amaral" />
+    <ClientRouter />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <Link href="/">Hi!</Link>
+        <Link href="/work">Work</Link>
+        <Link href="/blog">Blog</Link>
+      </nav>
+      <ThemeSwitcher />
+    </header>
+    <main transition:animate="slide">
+      <slot />
+    </main>
+    <footer class="grid-container full">
+      <p>Copyright © {new Date().getFullYear()} Willian Amaral</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  header {
+    max-width: var(--container-max-width);
+    margin: 4% auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+
+  main {
+    max-width: var(--container-max-width);
+    margin: auto;
+    min-height: 60vh;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+
+  footer > p {
+    font-size: 1.5rem;
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+const { href, label, ...rest } = Astro.props;
+---
+
+<a
+href={href}
+aria-label={`Go to ${label}`}
+target='_blank'
+rel='noreferrer'
+{...rest}
+>
+{label}
+</a>
