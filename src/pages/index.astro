@@ -10,13 +10,16 @@ import { Github, Twitter, Instagram, Linkedin } from '@/components/icons'
     <a href="mailto:will@amaral.dev">will@amaral.dev</a>
   </address>
   <p>
-    I'm a Brazilian web developer/journalist. <br />
-    I build cool UIs with <Anchor href="https://reactjs.org/" label="React" /> and
-    <Anchor href="https://nextjs.org/" label="NextJS" /> most of the time, but I
-    also love messing around with{' '}
-    <Anchor href="https://svelte.dev/" label="Svelte" /> and anything JavaScript.
+    I’m a Brazilian software engineer and journalist passionate about tech. <br
+    />
+    I specialize in <Anchor href="https://elixir-lang.org/" label="Elixir" />and
+    functional programming, and I excel at crafting interfaces with <Anchor
+      href="https://reactjs.org/"
+      label="React"
+    />. Beyond code, I create educational content to make technology more human
+    and accessible.
   </p>
-  <address>
+  <address class="social">
     <a
       href="https://github.com/will-amaral"
       aria-label="My github profile"
@@ -71,7 +74,8 @@ import { Github, Twitter, Instagram, Linkedin } from '@/components/icons'
     font-size: 1.5em;
   }
 
-  a:not(:last-child) {
-    margin-right: 15px;
+  .social {
+    display: flex;
+    gap: 20px;
   }
 </style>

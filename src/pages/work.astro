@@ -5,33 +5,80 @@ import Layout from '@/layouts/Layout.astro'
 <Layout pageTitle="My career and current projects">
   <h1>Career</h1>
   <p>
-    Working with the web since 2013 and with React since 2016, I have a
-    bachelor's degree in Journalism and a B.Tech degree in Software Development. <br
-    />
-    I've worked mostly as a frontend engineer, with a high focus on React and functional
-    programming.
+    I currently work as a Senior Consultant at <a
+      href="https://www.thoughtworks.com/">Thoughtworks</a
+    >, where I help build tech that
+    <strong>doesn’t suck</strong> — balancing scalability with actual human needs.
+    Yes, it’s possible. No, I don’t sleep much.
   </p>
-  <p>I also write random stuff if you are interested.</p>
-  <h2>Current Projects</h2>
+  <p>
+    When I’m not geeking out over pattern matching, I occasionally flirt with
+    <strong>React</strong> (for legacy apps that refuse to retire). I also
+    <strong>teach developers</strong> how to survive tech without losing their sanity
+    — because <em>“it works on my machine”</em> isn’t a valid defense.
+  </p>
+  <h2>🧰 Toolbox</h2>
+  <div class="grid-container halves u-align-left">
+    <div>
+      <h3>Daily Drivers ⚡</h3>
+      <ul>
+        <li>Elixir + Phoenix LiveView <em>(my love language)</em></li>
+        <li>TypeScript <em>(it’s complicated, but we make it work)</em></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Side Quests 🎮</h3>
+      <ul>
+        <li>React <em>(we’re exes who still share custody of the CSS)</em></li>
+        <li>
+          Rust <em
+            >(Currently losing a staring contest with the borrow checker)</em
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🚀 Active Projects</h2>
   <ul>
     <li>
-      Senior Consultant and Software Engineer at{' '}
-      <a href="https://www.thoughtworks.com/">Thoughtworks</a>
+      <strong>Thoughtworks Technology Radar:</strong>
+      Curating tools and trends shaping the future of software engineering.
+    </li>
+    <li>
+      <strong>Online Courses:</strong>
+      Real tutorials that go beyond yet another Todo app.
+    </li>
+    <li>
+      <strong>Career Transition Mentorship:</strong>
+      Helping folks pivot into tech without selling their souls to bootcamps.
+      <em>Pro tip: You don’t need 10 Udemy certificates to start.</em>
     </li>
   </ul>
-  <h2>Languages and Frameworks</h2>
-  <ul class="grid-container halves u-align-left">
-    <li>JavaScript</li>
-    <li>ReactJs</li>
-    <li>NodeJs</li>
-    <li>Elixir</li>
-    <li>Ruby</li>
-    <li>Rust</li>
-  </ul>
-  <h2>Certificates</h2>
-  <ul class="grid-container halves u-align-left">
+
+  <h2>📜 Certificates & Education</h2>
+  <ul>
     <li>
-      <a href="/lean-inception-certificado.pdf"> Lean Inception Facilitator </a>
+      <strong>MBA in Software Engineering:</strong>
+      University of São Paulo, Brazil <em>In progress</em>
+    </li>
+    <li>
+      <a href="/lean-inception-certificado.pdf">
+        <strong>Lean Inception Facilitator</strong></a
+      >
+    </li>
+    <li>
+      <strong>Digital Journalism:</strong>
+      Extension in Content Management Systems
+    </li>
+    <li>
+      <strong>Agile Alliance Certified Agile Product Owner:</strong>
+      <em>In progress</em>. Ask me about my love-hate relationship with Jira.
+    </li>
+    <li>
+      <strong>Self-Awarded Title:</strong>
+      “World’s Okayest Debugger” 🏆
+      <em>(I can fix your code, but I can’t fix my sleep schedule.)</em>
     </li>
   </ul>
 </Layout>
@@ -39,5 +86,9 @@ import Layout from '@/layouts/Layout.astro'
 <style>
   h2 {
     font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
   }
 </style>
