@@ -1,0 +1,4 @@
+# Netlify redirects. Files in public/ are copied to the publish directory as-is.
+# Posts used to be named after their date; keep the shared links working.
+/blog/26-de-agosto-de-2015  /blog/nen-da-banda  301
+/blog/9-de-agosto-de-2026   /blog/dia-dos-pais  301
