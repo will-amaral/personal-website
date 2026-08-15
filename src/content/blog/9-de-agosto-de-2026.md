@@ -1,7 +1,7 @@
 ---
-title: "9 de agosto de 2026"
-description: "Dia dos pais"
-pubDate: 2026-08-15
+title: "Dia dos pais"
+description: "Reflexões ao volante"
+pubDate: 2026-08-09
 lang: "pt"
 tags: ["crônicas"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "26 de agosto de 2015"
-description: "Nen da Banda"
+title: "Nen da Banda"
+description: "Sobre luto"
 pubDate: 2015-08-26
 lang: "pt"
 tags: ["crônicas"]
