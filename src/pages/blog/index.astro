@@ -1,14 +1,89 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import { getPosts, formatDate } from '@/lib/posts'
+
+const posts = await getPosts()
 ---
 
-<Layout pageTitle="This is my blog">
+<Layout
+  pageTitle="Blog"
+  description="Notes about software, Elixir, React and making complex systems approachable. Also personal reflections. Mostly in Portuguese."
+>
   <h1>Blog</h1>
   <p>
-    Exploring the intersection of tech and education. I write about
-    <strong>Elixir</strong>, <strong>React patterns</strong>, and
-    <strong>making complex systems approachable</strong>. Posts alternate
-    between English and Portuguese — bonus points if you read both!
+    Notes about software, teaching and everything in between. Most posts are in
+    <strong>Portuguese</strong> — some in English.
   </p>
-  <p><em>Migrating archives gradually. Fresh posts weekly!</em></p>
+
+  {posts.length === 0 && <p><em>Nothing here yet. Soon!</em></p>}
+
+  <ul class="posts">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}`}>
+            <h2>
+              {post.data.title}
+              {post.data.draft && <span class="draft">draft</span>}
+            </h2>
+          </a>
+          <p class="meta">
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formatDate(post.data.pubDate, post.data.lang)}
+            </time>
+            <span class="lang">{post.data.lang === 'pt' ? '🇧🇷' : '🇺🇸'}</span>
+          </p>
+          <p class="description">{post.data.description}</p>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
+
+<style>
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .posts > li {
+    margin-bottom: 50px;
+  }
+
+  .posts a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .posts a:hover h2 {
+    color: var(--accent-color);
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .meta {
+    margin: 5px 0;
+    color: var(--text-color-softer);
+    display: flex;
+    gap: 10px;
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  .draft {
+    margin-left: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    vertical-align: middle;
+  }
+</style>

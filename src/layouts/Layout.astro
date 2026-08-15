@@ -6,21 +6,22 @@ import '@/styles/barebones.css'
 import Link from '@/components/Link.astro'
 import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
 
-const { pageTitle } = Astro.props
+const {
+  pageTitle,
+  description = 'Software Engineer and Journalist, I work with information and technology.',
+  lang = 'en',
+} = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" transition:name="root" transition:animate="none">
+<html lang={lang} transition:name="root" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle} | Will Amaral</title>
-    <meta
-      name="description"
-      content="Software Engineer and Journalist, I work with information and technology."
-    />
+    <meta name="description" content={description} />
     <meta name="author" content="Will Amaral" />
     <ClientRouter />
   </head>

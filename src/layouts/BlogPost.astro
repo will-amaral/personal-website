@@ -1,0 +1,106 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Link from '@/components/Link.astro'
+import { formatDate } from '@/lib/posts'
+import type { Post } from '@/lib/posts'
+
+type Props = Post['data']
+
+const { title, description, pubDate, updatedDate, lang, tags, draft } =
+  Astro.props
+---
+
+<Layout pageTitle={title} description={description} lang={lang}>
+  <article>
+    <h1>{title}</h1>
+    <p class="meta">
+      <time datetime={pubDate.toISOString()}>{formatDate(pubDate, lang)}</time>
+      {
+        updatedDate && (
+          <span>
+            {lang === 'pt' ? ' · atualizado em ' : ' · updated on '}
+            <time datetime={updatedDate.toISOString()}>
+              {formatDate(updatedDate, lang)}
+            </time>
+          </span>
+        )
+      }
+      {draft && <span class="draft">draft</span>}
+    </p>
+    {
+      tags.length > 0 && (
+        <p class="tags">
+          {tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </p>
+      )
+    }
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+  <p class="back">
+    <Link href="/blog">{lang === 'pt' ? '← Todos os posts' : '← All posts'}</Link
+    >
+  </p>
+</Layout>
+
+<style>
+  h1 {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .meta {
+    color: var(--text-color-softer);
+    margin-top: 5px;
+  }
+
+  .draft {
+    margin-left: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--text-color-softer);
+  }
+
+  .tag::before {
+    content: '#';
+  }
+
+  .prose {
+    margin-top: 40px;
+    line-height: 1.7;
+  }
+
+  .prose :global(img) {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--border-color);
+    margin-left: 0;
+    padding-left: 20px;
+    color: var(--text-color-softer);
+  }
+
+  .prose :global(pre) {
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  .back {
+    margin-top: 60px;
+  }
+</style>
