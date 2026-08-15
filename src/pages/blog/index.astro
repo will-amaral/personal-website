@@ -34,6 +34,12 @@ const posts = await getPosts()
             <span class="lang">{post.data.lang === 'pt' ? '🇧🇷' : '🇺🇸'}</span>
           </p>
           <p class="description">{post.data.description}</p>
+          {post.data.contentWarning && (
+            <p class="warning">
+              {post.data.lang === 'pt' ? 'Aviso de conteúdo: ' : 'Content warning: '}
+              {post.data.contentWarning}
+            </p>
+          )}
         </li>
       ))
     }
@@ -75,6 +81,14 @@ const posts = await getPosts()
 
   .description {
     margin: 0;
+  }
+
+  .warning {
+    margin: 5px 0 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color);
+    color: var(--text-color-softer);
+    font-size: 0.9em;
   }
 
   .draft {

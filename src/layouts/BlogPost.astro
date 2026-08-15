@@ -6,8 +6,18 @@ import type { Post } from '@/lib/posts'
 
 type Props = Post['data']
 
-const { title, description, pubDate, updatedDate, lang, tags, draft } =
-  Astro.props
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  lang,
+  tags,
+  draft,
+  contentWarning,
+} = Astro.props
+
+const warningLabel = lang === 'pt' ? 'Aviso de conteúdo' : 'Content warning'
 ---
 
 <Layout pageTitle={title} description={description} lang={lang}>
@@ -34,6 +44,14 @@ const { title, description, pubDate, updatedDate, lang, tags, draft } =
             <span class="tag">{tag}</span>
           ))}
         </p>
+      )
+    }
+    {
+      contentWarning && (
+        <aside class="content-warning" role="note" aria-label={warningLabel}>
+          <p class="content-warning-label">{warningLabel}</p>
+          <p>{contentWarning}</p>
+        </aside>
       )
     }
     <div class="prose">
@@ -75,6 +93,28 @@ const { title, description, pubDate, updatedDate, lang, tags, draft } =
 
   .tag::before {
     content: '#';
+  }
+
+  .content-warning {
+    margin-top: 40px;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    background-color: var(--background-color-softer);
+  }
+
+  .content-warning > p {
+    margin: 0;
+  }
+
+  .content-warning > .content-warning-label {
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-color-softer);
+    margin-bottom: 5px;
   }
 
   .prose {

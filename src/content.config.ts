@@ -10,6 +10,8 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     /* used for the <html lang> and for date formatting */
     lang: z.enum(['pt', 'en']).default('pt'),
+    /* shown above the post body, and flagged on the listing page */
+    contentWarning: z.string().optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),
