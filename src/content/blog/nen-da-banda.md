@@ -3,7 +3,7 @@ title: "Nen da Banda"
 description: "Sobre luto"
 pubDate: 2015-08-26
 lang: "pt"
-tags: ["crônicas"]
+tags: ["crônicas", "drama"]
 ---
 
 — E como foi lá nos Estados Unidos?

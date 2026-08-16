@@ -3,7 +3,7 @@ title: "Gabriel — Primeiro contato"
 description: "Tomando café com um desconhecido"
 pubDate: 2026-08-13
 lang: "pt"
-tags: ["crônicas"]
+tags: ["crônicas", "cotidiano", "romance"]
 ---
 
 Era de se esperar que eu já estivesse me acostumando com esses primeiros encontros. Apesar de um começo não muito promissor na minha vida de homem divorciado e pronto para a luta, eu já havia tido algumas interações positivas. Algumas definitivamente **muito** boas, diga-se de passagem. Mas a insegurança tomava conta de mim sempre que eu me aproximava da pessoa que havia marcado um encontro comigo, independentemente do quanto havíamos conversado ou de quantas fotos minhas ela tinha visto. Naquele breve instante, tudo parecia errado. Meu peso, minha aparência e até as minhas roupas.

@@ -3,7 +3,7 @@ title: "Dia dos pais"
 description: "Reflexões ao volante"
 pubDate: 2026-08-09
 lang: "pt"
-tags: ["crônicas"]
+tags: ["crônicas", "cotidiano", "família"]
 ---
 
 Quando eu tinha 16 anos, fui visitar um colega da escola em sua casa. Família comum, de classe média, nada muito especial ou fora do comum. Quando chegamos, a mãe correu para me receber. Ela era claramente superprotetora e se esforçava para participar da conversa. Trouxe coisas para comer, sorria o tempo todo e parecia feliz que eu estivesse ali. Meu colega, claramente irritado com a atenção exagerada, revirou os olhos para mim com um sorriso cúmplice, dizendo com o olhar: "que saco isso, né". Eu sorri em retribuição. "Um saco mesmo".
