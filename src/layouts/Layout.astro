@@ -8,7 +8,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
 
 const {
   pageTitle,
-  description = 'Software Engineer and Journalist, I work with information and technology.',
+  description = 'Will Amaral, Lead Engineer at Thoughtworks. Product engineering, architecture, technical leadership and writing.',
   lang = 'en',
 } = Astro.props
 ---
@@ -23,14 +23,16 @@ const {
     <title>{pageTitle} | Will Amaral</title>
     <meta name="description" content={description} />
     <meta name="author" content="Will Amaral" />
+    <link rel="canonical" href={new URL(Astro.url.pathname === '/blog' ? '/writing' : Astro.url.pathname, 'https://will.amaral.dev')} />
     <ClientRouter />
   </head>
   <body>
     <header>
-      <nav>
-        <Link href="/">Hi!</Link>
+      <nav aria-label="Main navigation">
+        <Link href="/">Home</Link>
         <Link href="/work">Work</Link>
-        <Link href="/blog">Blog</Link>
+        <Link href="/speaking">Speaking</Link>
+        <Link href="/writing">Writing</Link>
       </nav>
       <ThemeSwitcher />
     </header>
@@ -56,12 +58,14 @@ const {
   nav {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
   }
 
   main {
     max-width: var(--container-max-width);
     margin: auto;
     min-height: 60vh;
+    padding-bottom: 3rem;
   }
 
   footer {
@@ -71,4 +75,14 @@ const {
   footer > p {
     font-size: 1.5rem;
   }
+</style>
+
+<style is:global>
+  main h1 { font-weight: 500; }
+  main h2 { font-size: 2.8rem; margin-top: 4rem; }
+  main h3 { font-size: 2.2rem; font-weight: 500; letter-spacing: 0; margin-bottom: 1rem; }
+  main section { margin-top: 3rem; }
+  main .meta { color: var(--text-color-softer); font-size: 1.6rem; }
+  a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 5px; }
+  @media (max-width: 599px) { header { gap: 2rem; } }
 </style>

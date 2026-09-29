@@ -1,81 +1,32 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Anchor from '@/components/Anchor.astro'
 import { Github, Twitter, Instagram, Linkedin } from '@/components/icons'
 ---
 
-<Layout pageTitle="Hi!, I'm Will">
+<Layout pageTitle="Hi, I'm Will" description="Will Amaral is a Lead Engineer at Thoughtworks, working across product engineering, architecture and technical publishing.">
   <h1>Hi, I'm Will</h1>
-  <address>
-    <a href="mailto:will@amaral.dev">will@amaral.dev</a>
-  </address>
-  <p>
-    I’m a Brazilian software engineer and journalist passionate about tech. <br
-    />
-    I specialize in <Anchor href="https://elixir-lang.org/" label="Elixir" />and
-    functional programming, and I excel at crafting interfaces with <Anchor
-      href="https://reactjs.org/"
-      label="React"
-    />. Beyond code, I create educational content to make technology more human
-    and accessible.
-  </p>
+  <p class="intro">I'm a Lead Engineer at Thoughtworks, with a background in journalism and a career building web products.</p>
+  <p>I work across product engineering, architecture and technical leadership: building software, guiding technical decisions and helping teams deliver and evolve their products.</p>
+  <p>My work has also taken me into technical publishing, as a Technical Product Owner for the Thoughtworks Technology Radar and Looking Glass. Engineering and journalism have more in common than you might think: asking good questions, making sense of complexity and explaining things clearly.</p>
+  <p>Based in São José dos Campos, Brazil. Working with teams around the world.</p>
+  <div class="explore">
+    <a href="/work">Explore my work →</a>
+    <a href="/speaking">Talks →</a>
+    <a href="/writing">Writing →</a>
+  </div>
+  <p class="contact"><a href="mailto:will@amaral.dev">will@amaral.dev</a></p>
   <address class="social">
-    <a
-      href="https://github.com/will-amaral"
-      aria-label="My github profile"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Github />
-    </a>
-    <a
-      href="https://twitter.com/willamaral_io"
-      aria-label="My twitter profile"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Twitter />
-    </a>
-    <a
-      href="https://www.instagram.com/will.amaral.dev/"
-      aria-label="My instagram profile"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Instagram />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/willian-amaral/"
-      aria-label="My linkedin profile"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Linkedin />
-    </a>
+    <a href="https://github.com/will-amaral" aria-label="GitHub" target="_blank" rel="noreferrer"><Github /></a>
+    <a href="https://www.linkedin.com/in/willian-amaral/" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin /></a>
+    <a href="https://twitter.com/willamaral_io" aria-label="Twitter" target="_blank" rel="noreferrer"><Twitter /></a>
+    <a href="https://www.instagram.com/will.amaral.dev/" aria-label="Instagram" target="_blank" rel="noreferrer"><Instagram /></a>
   </address>
 </Layout>
 
 <style>
-  h1 {
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-
-  address > a {
-    font-style: normal;
-    font-size: 1.5em;
-    font-weight: 200;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  p {
-    margin-top: 50px;
-    font-size: 1.5em;
-  }
-
-  .social {
-    display: flex;
-    gap: 20px;
-  }
+  .intro { font-size: 2.5rem; margin-top: 3rem; }
+  .explore, .social { display: flex; flex-wrap: wrap; gap: 2rem; }
+  .explore { margin: 3rem 0; }
+  .contact { margin-top: 4rem; }
+  .social a { color: inherit; }
 </style>

@@ -1,10 +1,11 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const { href, ...rest } = Astro.props;
+const active = pathname === href || (href === '/writing' && pathname.startsWith('/blog')); 
 ---
 
 
-<a aria-current={pathname === href ? 'page' : null} href={href} {...rest}>
+<a aria-current={active ? 'page' : null} href={href} {...rest}>
   <slot />
 </a>
 

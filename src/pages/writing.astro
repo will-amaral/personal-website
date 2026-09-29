@@ -1,0 +1,111 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getPosts, formatDate } from '@/lib/posts'
+
+const posts = await getPosts()
+---
+
+<Layout
+  pageTitle="Writing"
+  description="Technical articles and personal chronicles by Will Amaral, in English and Portuguese."
+>
+  <h1>Writing</h1>
+  <p>Some writing comes from my work in technology. Some comes from everyday life. Both owe something to my background in journalism.</p>
+  <section id="technology">
+    <h2>Technology and engineering</h2>
+    <p>Selected articles co-authored for Thoughtworks:</p>
+    <ul>
+      <li><a href="https://www.thoughtworks.com/insights/blog/technology-strategy/macro-trends-tech-industry-april-2025">Macro trends in the tech industry — April 2025</a></li>
+      <li><a href="https://www.thoughtworks.com/insights/blog/technology-strategy/macro-trends-tech-industry-november-2025">Macro trends in the tech industry — November 2025</a></li>
+    </ul>
+  </section>
+  <section aria-labelledby="chronicles-heading">
+    <h2 id="chronicles-heading">Personal chronicles</h2>
+    <p>Stories and reflections about everyday life, relationships and everything in between. Written in Portuguese.</p>
+  {posts.length === 0 && <p><em>Nothing here yet. Soon!</em></p>}
+
+  <ul class="posts">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}`}>
+            <h2>
+              {post.data.title}
+              {post.data.draft && <span class="draft">draft</span>}
+            </h2>
+          </a>
+          <p class="meta">
+            <time datetime={post.data.pubDate.toISOString()}>
+              {formatDate(post.data.pubDate, post.data.lang)}
+            </time>
+            <span class="lang">{post.data.lang === 'pt' ? '🇧🇷' : '🇺🇸'}</span>
+          </p>
+          <p class="description">{post.data.description}</p>
+          {post.data.contentWarning && (
+            <p class="warning">
+              {post.data.lang === 'pt' ? 'Aviso de conteúdo: ' : 'Content warning: '}
+              {post.data.contentWarning}
+            </p>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+  </section>
+</Layout>
+
+<style>
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .posts > li {
+    margin-bottom: 50px;
+  }
+
+  .posts a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .posts a:hover h2 {
+    color: var(--accent-color);
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .meta {
+    margin: 5px 0;
+    color: var(--text-color-softer);
+    display: flex;
+    gap: 10px;
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  .warning {
+    margin: 5px 0 0;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color);
+    color: var(--text-color-softer);
+    font-size: 0.9em;
+  }
+
+  .draft {
+    margin-left: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    vertical-align: middle;
+  }
+</style>

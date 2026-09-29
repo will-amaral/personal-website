@@ -2,93 +2,59 @@
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout pageTitle="My career and current projects">
-  <h1>Career</h1>
-  <p>
-    I currently work as a Senior Consultant at <a
-      href="https://www.thoughtworks.com/">Thoughtworks</a
-    >, where I help build tech that
-    <strong>doesn’t suck</strong> — balancing scalability with actual human needs.
-    Yes, it’s possible. No, I don’t sleep much.
-  </p>
-  <p>
-    When I’m not geeking out over pattern matching, I occasionally flirt with
-    <strong>React</strong> (for legacy apps that refuse to retire). I also
-    <strong>teach developers</strong> how to survive tech without losing their sanity
-    — because <em>“it works on my machine”</em> isn’t a valid defense.
-  </p>
-  <h2>🧰 Toolbox</h2>
-  <div class="grid-container halves u-align-left">
-    <div>
-      <h3>Daily Drivers ⚡</h3>
-      <ul>
-        <li>Elixir + Phoenix LiveView <em>(my love language)</em></li>
-        <li>TypeScript <em>(it’s complicated, but we make it work)</em></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Side Quests 🎮</h3>
-      <ul>
-        <li>React <em>(we’re exes who still share custody of the CSS)</em></li>
-        <li>
-          Rust <em
-            >(Currently losing a staring contest with the borrow checker)</em
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+<Layout pageTitle="Work" description="Selected work in product engineering, technical leadership, architecture and publishing at Thoughtworks and beyond.">
+  <h1>Work</h1>
+  <p class="intro">I'm a Lead Engineer at <a href="https://www.thoughtworks.com/">Thoughtworks</a>, where I've worked since 2021 across client engagements and Global Technology.</p>
+  <p>My work combines hands-on software engineering with architectural decisions, collaboration with product teams and mentoring. I've helped teams evolve existing applications, build new platforms and improve how they develop and deliver software.</p>
 
-  <h2>🚀 Active Projects</h2>
-  <ul>
-    <li>
-      <strong>Thoughtworks Technology Radar:</strong>
-      Curating tools and trends shaping the future of software engineering.
-    </li>
-    <li>
-      <strong>Online Courses:</strong>
-      Real tutorials that go beyond yet another Todo app.
-    </li>
-    <li>
-      <strong>Career Transition Mentorship:</strong>
-      Helping folks pivot into tech without selling their souls to bootcamps.
-      <em>Pro tip: You don’t need 10 Udemy certificates to start.</em>
-    </li>
-  </ul>
+  <h2>Selected work</h2>
+  <section>
+    <h3>Industrial distribution client</h3>
+    <p class="meta">April 2026–present</p>
+    <p>I lead workstreams focused on A/B testing and experimentation, alongside the modernization and rearchitecture of legacy applications. My role combines hands-on engineering with technical direction, helping the team turn product goals into implementation decisions.</p>
+  </section>
+  <section>
+    <h3>Global agriscience company</h3>
+    <p class="meta">December 2025–March 2026</p>
+    <p>I provided technical direction for a team building and evolving a portal for business operations. My work spanned frontend and backend development, architectural decisions and alignment between engineering and business needs.</p>
+    <p>I also mentored developers and supported collaboration across teams, working with TypeScript, React, .NET and Azure in a distributed architecture.</p>
+  </section>
+  <section>
+    <h3>Thoughtworks Global Technology</h3>
+    <p class="meta">2024–2025</p>
+    <p>As a Technical Product Owner, I supported the development and delivery of the <a href="https://www.thoughtworks.com/radar">Technology Radar</a> and <a href="https://www.thoughtworks.com/insights/looking-glass">Looking Glass</a>, working across technical leadership, marketing, content and engineering teams.</p>
+    <p>My responsibilities included coordinating publishing workflows and roadmaps, managing backlogs and maintaining the code and automations behind the editorial process. It was a chance to bring product thinking, software engineering and my journalism background into the same work.</p>
+    <p>I also co-authored Macro Trends articles exploring the broader themes emerging from the Radar. <a href="/writing#technology">Read selected articles →</a></p>
+  </section>
+  <section>
+    <h3>Global accounting firm</h3>
+    <p class="meta">June 2023–February 2024</p>
+    <p>I helped engineering teams build and evolve a distributed web platform used across business units. My work included architectural decisions, stakeholder alignment, development practices and coordination of delivery across teams, using React, TypeScript, .NET and Azure.</p>
+  </section>
+  <section>
+    <h3>Major telecommunications company</h3>
+    <p class="meta">May 2022–March 2023</p>
+    <p>I worked with a UI engineering team on application development and integration with external systems and APIs. I helped rearchitect an existing frontend monolith into micro-frontends and coached developers through implementation and design decisions.</p>
+  </section>
+  <section>
+    <h3>Online survey services company</h3>
+    <p class="meta">December 2021–May 2022</p>
+    <p>I helped evolve a SaaS product and its ecosystem, refactoring legacy JavaScript into TypeScript with test-driven development. The work focused on making the codebase easier to extend, improving developer experience and mentoring engineers.</p>
+  </section>
 
-  <h2>📜 Certificates & Education</h2>
+  <h2>Before Thoughtworks</h2>
+  <p>At Trivento Educação (2020–2021), I developed web and mobile applications and later led development work on learning management software. At Mercurio Digital (2016–2020), I built websites and applications across media, marketing, health and other domains.</p>
+  <p>Before moving into software, I worked in journalism, digital communications and English teaching. Explaining things clearly has remained part of the job.</p>
+
+  <h2>Tools and practices</h2>
+  <p>Much of my professional work has been with TypeScript, React and Node.js, alongside APIs, cloud platforms and distributed systems. I also have experience with Elixir/Phoenix, Ruby, Python and PHP.</p>
+  <p>Beyond the stack, I work with testing, CI/CD, feature flags, release practices and architectural evolution. I still have a soft spot for functional programming.</p>
+
+  <h2>Education</h2>
   <ul>
-    <li>
-      <strong>MBA in Software Engineering:</strong>
-      University of São Paulo, Brazil <em>In progress</em>
-    </li>
-    <li>
-      <a href="/lean-inception-certificado.pdf">
-        <strong>Lean Inception Facilitator</strong></a
-      >
-    </li>
-    <li>
-      <strong>Digital Journalism:</strong>
-      Extension in Content Management Systems
-    </li>
-    <li>
-      <strong>Agile Alliance Certified Agile Product Owner:</strong>
-      <em>In progress</em>. Ask me about my love-hate relationship with Jira.
-    </li>
-    <li>
-      <strong>Self-Awarded Title:</strong>
-      “World’s Okayest Debugger” 🏆
-      <em>(I can fix your code, but I can’t fix my sleep schedule.)</em>
-    </li>
+    <li><strong>MBA, Software Engineering</strong> — USP/Esalq, 2023–2025</li>
+    <li><strong>Bachelor of Technology, Systems Analysis and Development</strong> — IFSP, 2016–2019</li>
+    <li><strong>Bachelor's degree, Journalism</strong> — Universidade de Taubaté, 2012–2015</li>
+    <li><a href="/lean-inception-certificado.pdf">Certified Lean Inception Facilitator</a> — Caroli.org, 2022</li>
   </ul>
 </Layout>
-
-<style>
-  h2 {
-    font-size: 1.5em;
-  }
-
-  h3 {
-    font-size: 1.25em;
-  }
-</style>
